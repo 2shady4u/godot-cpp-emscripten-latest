@@ -54,6 +54,7 @@ jobs:
           ./emsdk install ${{env.EMSDK_VERSION}}
           ./emsdk activate ${{env.EMSDK_VERSION}}
           source ./emsdk_env.sh
+          emcc --clear-cache
           cd ..
           mkdir -v -p ${{env.PROJECT_FOLDER}}/${{env.TARGET_PATH}}
           cd ${{env.PROJECT_FOLDER}}
